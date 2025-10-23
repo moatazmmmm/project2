@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+tensorflow
+pillow
+numpy
+scikit-learn
+pydantic
+sqlalchemy
+seaborn

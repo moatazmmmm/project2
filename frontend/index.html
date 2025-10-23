@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CIFAR-10 Predictor</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="header">
+<div class="container">
+<h1>CIFAR-10 Predictor</h1>
+<p class="subtitle">Upload an image and get predictions from the trained CIFAR-10 model.</p>
+<div class="controls">
+<label class="api-key">API Key: <input id="apiKeyInput" placeholder="Enter API key (default: testkey)" /></label>
+<button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
+</div>
+</div>
+</header>
+
+
+<main class="container">
+<section class="upload-section">
+<div id="dropZone" class="drop-zone">
+<input id="fileInput" type="file" accept="image/*" />
+<div class="drop-content">
+<p>Drag & Drop an image here, or click to select</p>
+<button id="sampleBtn">Use Sample Image</button>
+<button id="webcamBtn">Use Webcam</button>
+</div>
+</div>
+<div class="preview">
+<div class="preview-inner">
+<img id="previewImg" alt="Preview" src="" />
+<div id="spinner" class="spinner hidden"></div>
+</div>
+</div>
+</section>
+
+
+<section class="results-section">
+<h2>Results</h2>
+<div id="results" class="results empty">No prediction yet</div>
+<div class="top3" id="top3"></div>
+<div id="error" class="error"></div>
+</section>
+
+
+<section class="history-section">
+<h3>History</h3>
+<div id="history"></div>
+</section>
+</main>
+
+
+<footer class="footer">
+<div class="container">
+<p>Built by Moataz Khaled — CIFAR-10 Project</p>
+</div>
+</footer>
+
+
+<template id="history-item-tpl">
+<div class="history-item">
+<img class="thumb" src="" />
+<div class="meta">
+<div class="label"></div>
+<div class="confidence"></div>
+</div>
+</html>
